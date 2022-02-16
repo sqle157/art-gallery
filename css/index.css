@@ -195,7 +195,7 @@ body {
 	display: grid;
 	gap: 2rem;
 	grid-template-columns: repeat(5, 1fr);
-	grid-template-rows: repeat(2, 1fr);
+	grid-template-rows: repeat(3, 1fr);
 }
 
 /* Grid Areas */
@@ -234,7 +234,7 @@ body {
 }
 
 .grid__text:first-of-type {
-	padding: 0 3rem 2rem 0;
+	padding: 5rem 3rem 5rem 0;
 }
 
 .grid__text:last-of-type {
@@ -457,7 +457,7 @@ body {
 	}
 
 	.grid__text:first-of-type {
-		padding-right: 0;
+		padding: 0;
 	}
 
 	.gallery__feature__grid {
