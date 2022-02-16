@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300;400;900&display=swap");
 
 :root {
 	--color-tan: #d5966c;
@@ -53,7 +53,7 @@ body {
 /* Gallery Intro Section */
 .gallery__intro {
 	width: 100%;
-	height: 60rem;
+	height: 50rem;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
@@ -80,13 +80,14 @@ body {
 	align-items: flex-start;
 	position: absolute;
 	top: 18%;
-	left: -15.8%;
-	transform: translate(-18%, 15.8%);
+	left: -20%;
+	transform: translate(-18%, 20%);
 }
 
 .gallery__heading {
 	font-size: var(--fs-96);
 	line-height: var(--ls-88);
+	font-weight: 900;
 }
 
 .gallery__heading--gradient-1 {
@@ -107,7 +108,7 @@ body {
 	width: 55%;
 	height: 100%;
 	background: url(../assets/desktop/image-hero@2x.jpg) no-repeat center center;
-	background-size: cover;
+	background-size: 100% 100%;
 }
 
 .gallery__intro__content .gallery__intro__text {
@@ -187,7 +188,7 @@ body {
 	font-size: var(--fs-60);
 	line-height: 3.75rem;
 	margin-bottom: 1.5rem;
-	font-weight: 700;
+	font-weight: 900;
 }
 
 .gallery__feature__grid {
@@ -301,7 +302,7 @@ body {
 @media only screen and (max-width: 64rem) {
 	/* Intro Section */
 	.gallery__intro {
-		height: 50rem;
+		height: 43.75rem;
 	}
 
 	.gallery__intro--black-bg {
@@ -359,9 +360,6 @@ body {
 /* Tablet */
 @media only screen and (max-width: 48rem) {
 	/* Intro Section */
-	.gallery__intro {
-		height: 43.75rem;
-	}
 
 	.gallery__intro__content .gallery__intro__hero {
 		background: url(../assets/tablet/image-hero@2x.jpg) no-repeat center center;
