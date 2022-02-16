@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300;400;500&display=swap");
+
+:root {
+	--color-tan: #d5966c;
+	--color-black: #151515;
+	--color-white: #ffffff;
+
+	/* Font family */
+	--ff: "Big Shoulders Display", cursive;
+
+	/* Font size */
+	--fs-96: 6rem;
+	--fs-70: 4.375rem;
+	--fs-60: 3.75rem;
+	--fs-36: 2.25rem;
+	--fs-22: 1.375rem;
+	--fs-18: 1.125rem;
+
+	/* Line spacing */
+	--ls-88: 5.5rem;
+	--ls-70: 4.375rem;
+	--ls-50: 3.125rem;
+	--ls-36: 2.25rem;
+	--ls-32: 2rem;
+	--ls-28: 1.75rem;
+}
+
+body {
+	font-family: var(--ff);
+	font-weight: 400;
+	font-size: var(--fs-18);
+	width: 100vw;
+	min-height: 100vh;
+	background-color: var(--color-white);
+}
+
+/* Component CSS */
+.location-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.location-container__map {
+	width: 100%;
+	height: 37.5rem;
+	/* background: url(../assets/desktop/image-map@2x.png) no-repeat center center;
+	background-size: cover; */
+}
+
+#map:hover {
+	cursor: pointer;
+}
+
+body#location .btn {
+	background-image: linear-gradient(to left, var(--color-black) 80%, var(--color-tan) 20%);
+	z-index: 1000;
+	position: absolute;
+	top: 0;
+	left: 10%;
+	transform: translate(0, -10%);
+}
+
+body#location .btn::before {
+	background-image: linear-gradient(to left, var(--color-tan) 80%, var(--color-black) 20%);
+}
+
+body#location .btn svg {
+	position: static;
+	right: 0;
+	transform: translateX(0);
+	margin-right: 4.5rem;
+}
+
+.location-container__detail {
+	width: 100%;
+	height: fit-content;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--color-black);
+	color: var(--color-white);
+	padding: 10%;
+}
+
+.location__detail-wrapper {
+	/* width: min(100%, 69.375rem); */
+	display: flex;
+	align-items: center;
+}
+
+.location__heading {
+	font-size: var(--fs-70);
+	line-height: var(--ls-70);
+	margin-right: 15rem;
+}
+
+.location__address {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.location__address__heading {
+	font-size: var(--ls-36);
+	line-height: var(--ls-36);
+	color: var(--color-tan);
+	margin-bottom: 1.5rem;
+}
+
+.location__paragraph {
+	font-size: var(--fs-22);
+	line-height: var(--ls-32);
+}
+
+.location__paragraph:last-of-type {
+	margin-top: 1.5rem;
+}
+
+body#location .footer {
+	background: var(--color-tan);
+	color: var(--color-black);
+	padding-inline: 10%;
+	justify-content: space-between;
+}
+
+body#location .icon {
+	fill: var(--color-black);
+}
+
+body#location .icon:hover {
+	fill: var(--color-white);
+}
+
+/* Media Query */
+/* Small Desktop */
+@media only screen and (max-width: 64rem) {
+	.location-container__detail,
+	body#location .footer {
+		padding-inline: 10%;
+	}
+}
+
+/* Tablet */
+@media only screen and (max-width: 48rem) {
+	.location-container__map {
+		height: 37.5rem;
+		background: url(../assets/tablet/image-map@2x.png) no-repeat center center;
+		background-size: cover;
+	}
+
+	.location__heading {
+		font-size: 3.4375rem;
+		line-height: var(--ls-50);
+		margin-right: 6rem;
+	}
+
+	.location__address__heading {
+		font-size: var(--ls-32);
+		line-height: var(--ls-32);
+	}
+
+	.location__paragraph {
+		font-size: var(--fs-18);
+		line-height: var(--ls-28);
+	}
+}
+
+/* Mobile */
+@media only screen and (max-width: 37.5rem) {
+	.location-container__map {
+		height: 34.375rem;
+		background: url(../assets/mobile/image-map@2x.png) no-repeat center center;
+		background-size: 100% 100%;
+	}
+
+	body#location .btn {
+		left: 0;
+	}
+
+	body#location .footer {
+		padding-inline: 5%;
+	}
+
+	.location-container__detail {
+		align-items: flex-start;
+		padding: 0;
+	}
+
+	.location__detail-wrapper {
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 10% 5%;
+	}
+
+	.location__heading {
+		font-size: 3.125rem;
+		line-height: 2.8125rem;
+		margin-right: 0;
+	}
+}
